@@ -1,16 +1,16 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview ColorFilter extending fabric.Image.filters.BaseFilter
+ * @fileoverview ColorFilter extending fabric.fabric.Image.filters.BaseFilter
  */
 import fabric from 'fabric';
 
 /**
  * ColorFilter object
  * @class ColorFilter
- * @extends {fabric.Image.filters.BaseFilter}
+ * @extends {fabric.fabric.Image.filters.BaseFilter}
  * @ignore
  */
-const ColorFilter = fabric.util.createClass(fabric.Image.filters.BaseFilter, /** @lends BaseFilter.prototype */{
+const ColorFilter = fabric.fabric.util.createClass(fabric.fabric.Image.filters.BaseFilter, /** @lends BaseFilter.prototype */{
     /**
      * Filter type
      * @param {String} type
@@ -20,7 +20,7 @@ const ColorFilter = fabric.util.createClass(fabric.Image.filters.BaseFilter, /**
 
     /**
      * Constructor
-     * @member fabric.Image.filters.ColorFilter.prototype
+     * @member fabric.fabric.Image.filters.ColorFilter.prototype
      * @param {Object} [options] Options object
      * @param {Number} [options.color='#FFFFFF'] Value of color (0...255)
      * @param {Number} [options.threshold=45] Value of threshold (0...255)
@@ -46,7 +46,7 @@ const ColorFilter = fabric.util.createClass(fabric.Image.filters.BaseFilter, /**
         const imageData = context.getImageData(0, 0, canvasEl.width, canvasEl.height);
         const {data} = imageData;
         const {threshold} = this;
-        let filterColor = fabric.Color.sourceFromHex(this.color);
+        let filterColor = fabric.fabric.Color.sourceFromHex(this.color);
         let i, len;
 
         if (this.x && this.y) {

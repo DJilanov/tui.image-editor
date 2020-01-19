@@ -24,10 +24,10 @@ class FreeDrawing extends Component {
         this.width = 12;
 
         /**
-         * fabric.Color instance for brush color
+         * fabric.fabric.Color instance for brush color
          * @type {fabric.Color}
          */
-        this.oColor = new fabric.Color('rgba(0, 0, 0, 0.5)');
+        this.oColor = new fabric.fabric.Color('rgba(0, 0, 0, 0.5)');
     }
 
     /**
@@ -51,7 +51,7 @@ class FreeDrawing extends Component {
         setting = setting || {};
         this.width = setting.width || this.width;
         if (setting.color) {
-            this.oColor = new fabric.Color(setting.color);
+            this.oColor = new fabric.fabric.Color(setting.color);
         }
         brush.width = this.width;
         brush.color = this.oColor.toRgba();

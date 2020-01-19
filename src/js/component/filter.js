@@ -14,7 +14,7 @@ import Emboss from '../extension/emboss';
 import ColorFilter from '../extension/colorFilter';
 
 const {rejectMessages} = consts;
-const {filters} = fabric.Image;
+const {filters} = fabric.fabric.Image;
 filters.Mask = Mask;
 filters.Blur = Blur;
 filters.Sharpen = Sharpen;
@@ -34,7 +34,7 @@ class Filter extends Component {
     }
 
     /**
-     * Add filter to source image (a specific filter is added on fabric.js)
+     * Add filter to source image (a specific filter is added on fabric.fabric.js)
      * @param {string} type - Filter type
      * @param {Object} [options] - Options of filter
      * @returns {Promise}
@@ -168,7 +168,7 @@ class Filter extends Component {
         let filterObj;
         // capitalize first letter for matching with fabric image filter name
         const fabricType = this._getFabricFilterType(type);
-        const ImageFilter = fabric.Image.filters[fabricType];
+        const ImageFilter = fabric.fabric.Image.filters[fabricType];
         if (ImageFilter) {
             filterObj = new ImageFilter(options);
             filterObj.options = options;

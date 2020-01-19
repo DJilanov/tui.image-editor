@@ -1,5 +1,5 @@
 import {extend, forEach} from 'tui-code-snippet';
-import {styleLoad} from '../../util';
+import util from '../../util';
 import style from '../template/style';
 import standardTheme from './standard';
 
@@ -12,7 +12,7 @@ import standardTheme from './standard';
 class Theme {
     constructor(customTheme) {
         this.styles = this._changeToObject(extend(standardTheme, customTheme));
-        styleLoad(this._styleMaker());
+        util.styleLoad(this._styleMaker());
     }
 
     /**

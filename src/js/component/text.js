@@ -228,13 +228,13 @@ class Text extends Component {
             }
 
             if (this.useItext) {
-                newText = new fabric.IText(text, styles);
+                newText = new fabric.fabric.IText(text, styles);
                 selectionStyle = snippet.extend({}, selectionStyle, {
                     originX: 'left',
                     originY: 'top'
                 });
             } else {
-                newText = new fabric.Text(text, styles);
+                newText = new fabric.fabric.Text(text, styles);
             }
 
             newText.set(selectionStyle);
@@ -387,12 +387,12 @@ class Text extends Component {
         });
 
         if (browser.msie && browser.version === 9) {
-            fabric.util.addListener(textarea, 'keydown', this._listeners.keydown);
+            fabric.fabric.util.addListener(textarea, 'keydown', this._listeners.keydown);
         } else {
-            fabric.util.addListener(textarea, 'input', this._listeners.input);
+            fabric.fabric.util.addListener(textarea, 'input', this._listeners.input);
         }
-        fabric.util.addListener(textarea, 'blur', this._listeners.blur);
-        fabric.util.addListener(textarea, 'scroll', this._listeners.scroll);
+        fabric.fabric.util.addListener(textarea, 'blur', this._listeners.blur);
+        fabric.fabric.util.addListener(textarea, 'scroll', this._listeners.scroll);
     }
 
     /**
@@ -408,12 +408,12 @@ class Text extends Component {
         this._textarea = null;
 
         if (browser.msie && browser.version < 10) {
-            fabric.util.removeListener(textarea, 'keydown', this._listeners.keydown);
+            fabric.fabric.util.removeListener(textarea, 'keydown', this._listeners.keydown);
         } else {
-            fabric.util.removeListener(textarea, 'input', this._listeners.input);
+            fabric.fabric.util.removeListener(textarea, 'input', this._listeners.input);
         }
-        fabric.util.removeListener(textarea, 'blur', this._listeners.blur);
-        fabric.util.removeListener(textarea, 'scroll', this._listeners.scroll);
+        fabric.fabric.util.removeListener(textarea, 'blur', this._listeners.blur);
+        fabric.fabric.util.removeListener(textarea, 'scroll', this._listeners.scroll);
     }
 
     /**
@@ -508,7 +508,7 @@ class Text extends Component {
 
     /**
      * onSelectClear handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onFabricSelectClear(fEvent) {
@@ -528,7 +528,7 @@ class Text extends Component {
 
     /**
      * onSelect handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onFabricSelect(fEvent) {

@@ -1,16 +1,16 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview Mask extending fabric.Image.filters.Mask
+ * @fileoverview Mask extending fabric.fabric.Image.filters.Mask
  */
 import fabric from 'fabric';
 
 /**
  * Mask object
  * @class Mask
- * @extends {fabric.Image.filters.BlendImage}
+ * @extends {fabric.fabric.Image.filters.BlendImage}
  * @ignore
  */
-const Mask = fabric.util.createClass(fabric.Image.filters.BlendImage, /** @lends Mask.prototype */{
+const Mask = fabric.fabric.util.createClass(fabric.fabric.Image.filters.BlendImage, /** @lends Mask.prototype */{
     /**
      * Apply filter to canvas element
      * @param {Object} pipelineState - Canvas element to apply filter
@@ -42,7 +42,7 @@ const Mask = fabric.util.createClass(fabric.Image.filters.BlendImage, /** @lends
      * @private
      */
     _createCanvasOfMask(width, height) {
-        const maskCanvasEl = fabric.util.createCanvasElement();
+        const maskCanvasEl = fabric.fabric.util.createCanvasElement();
 
         maskCanvasEl.width = width;
         maskCanvasEl.height = height;

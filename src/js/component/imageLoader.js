@@ -27,7 +27,7 @@ class ImageLoader extends Component {
     /**
      * Load image from url
      * @param {?string} imageName - File name
-     * @param {?(fabric.Image|string)} img - fabric.Image instance or URL of an image
+     * @param {?(fabric.Image|string)} img - fabric.fabric.Image instance or URL of an image
      * @returns {Promise}
      */
     load(imageName, img) {
@@ -57,7 +57,7 @@ class ImageLoader extends Component {
 
     /**
      * Set background image
-     * @param {?(fabric.Image|String)} img fabric.Image instance or URL of an image to set background to
+     * @param {?(fabric.Image|String)} img fabric.fabric.Image instance or URL of an image to set background to
      * @returns {Promise}
      * @private
      */

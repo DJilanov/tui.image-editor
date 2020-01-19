@@ -494,7 +494,7 @@ class Graphics {
     }
 
     /**
-     * Returns canvas element of fabric.Canvas[[lower-canvas]]
+     * Returns canvas element of fabric.fabric.Canvas[[lower-canvas]]
      * @returns {HTMLCanvasElement}
      */
     getCanvasElement() {
@@ -502,7 +502,7 @@ class Graphics {
     }
 
     /**
-     * Get fabric.Canvas instance
+     * Get fabric.fabric.Canvas instance
      * @returns {fabric.Canvas}
      * @private
      */
@@ -535,7 +535,7 @@ class Graphics {
         const callback = this._callbackAfterLoadingImageObject.bind(this);
 
         return new Promise(resolve => {
-            fabric.Image.fromURL(imgUrl, image => {
+            fabric.fabric.Image.fromURL(imgUrl, image => {
                 callback(image);
                 resolve(this.createObjectProperties(image));
             }, {
@@ -781,11 +781,11 @@ class Graphics {
      * @private
      */
     _setObjectCachingToFalse() {
-        fabric.Object.prototype.objectCaching = false;
+        fabric.fabric.Object.prototype.objectCaching = false;
     }
 
     /**
-     * Set canvas element to fabric.Canvas
+     * Set canvas element to fabric.fabric.Canvas
      * @param {Element|string} element - Wrapper or canvas element or selector
      * @private
      */
@@ -804,7 +804,7 @@ class Graphics {
             selectedElement.appendChild(canvasElement);
         }
 
-        this._canvas = new fabric.Canvas(canvasElement, {
+        this._canvas = new fabric.fabric.Canvas(canvasElement, {
             containerClass: 'tui-image-editor-canvas-container',
             enableRetinaScaling: false
         });
@@ -927,7 +927,7 @@ class Graphics {
 
     /**
      * "mouse:down" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onMouseDown(fEvent) {
@@ -937,7 +937,7 @@ class Graphics {
 
     /**
      * "object:added" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onObjectAdded(fEvent) {
@@ -951,7 +951,7 @@ class Graphics {
 
     /**
      * "object:removed" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onObjectRemoved(fEvent) {
@@ -962,7 +962,7 @@ class Graphics {
 
     /**
      * "object:moving" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onObjectMoved(fEvent) {
@@ -974,7 +974,7 @@ class Graphics {
 
     /**
      * "object:scaling" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onObjectScaled(fEvent) {
@@ -986,7 +986,7 @@ class Graphics {
 
     /**
      * "object:selected" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onObjectSelected(fEvent) {
@@ -998,7 +998,7 @@ class Graphics {
 
     /**
      * "path:created" canvas event handler
-     * @param {{path: fabric.Path}} obj - Path object
+     * @param {{path: fabric.fabric.Path}} obj - Path object
      * @private
      */
     _onPathCreated(obj) {
@@ -1023,7 +1023,7 @@ class Graphics {
 
     /**
      * "selction:created" canvas event handler
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onSelectionCreated(fEvent) {

@@ -1,16 +1,16 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview Blur extending fabric.Image.filters.Convolute
+ * @fileoverview Blur extending fabric.fabric.Image.filters.Convolute
  */
 import fabric from 'fabric';
 
 /**
  * Blur object
  * @class Blur
- * @extends {fabric.Image.filters.Convolute}
+ * @extends {fabric.fabric.Image.filters.Convolute}
  * @ignore
  */
-const Blur = fabric.util.createClass(fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
+const Blur = fabric.fabric.util.createClass(fabric.fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
     /**
      * Filter type
      * @param {String} type

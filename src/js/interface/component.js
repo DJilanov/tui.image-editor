@@ -45,7 +45,7 @@ class Component {
     }
 
     /**
-     * Returns canvas element of fabric.Canvas[[lower-canvas]]
+     * Returns canvas element of fabric.fabric.Canvas[[lower-canvas]]
      * @returns {HTMLCanvasElement}
      */
     getCanvasElement() {
@@ -53,7 +53,7 @@ class Component {
     }
 
     /**
-     * Get fabric.Canvas instance
+     * Get fabric.fabric.Canvas instance
      * @returns {fabric.Canvas}
      */
     getCanvas() {

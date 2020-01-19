@@ -1,16 +1,16 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview Sharpen extending fabric.Image.filters.Convolute
+ * @fileoverview Sharpen extending fabric.fabric.Image.filters.Convolute
  */
 import fabric from 'fabric';
 
 /**
  * Sharpen object
  * @class Sharpen
- * @extends {fabric.Image.filters.Convolute}
+ * @extends {fabric.fabric.Image.filters.Convolute}
  * @ignore
  */
-const Sharpen = fabric.util.createClass(fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
+const Sharpen = fabric.fabric.util.createClass(fabric.fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
     /**
      * Filter type
      * @param {String} type

@@ -1,16 +1,16 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview Emboss extending fabric.Image.filters.Convolute
+ * @fileoverview Emboss extending fabric.fabric.Image.filters.Convolute
  */
 import fabric from 'fabric';
 
 /**
  * Emboss object
  * @class Emboss
- * @extends {fabric.Image.filters.Convolute}
+ * @extends {fabric.fabric.Image.filters.Convolute}
  * @ignore
  */
-const Emboss = fabric.util.createClass(fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
+const Emboss = fabric.fabric.util.createClass(fabric.fabric.Image.filters.Convolute, /** @lends Convolute.prototype */{
     /**
      * Filter type
      * @param {String} type

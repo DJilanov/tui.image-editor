@@ -150,7 +150,7 @@ class Icon extends Component {
      * @returns {fabric.Path} Path object
      */
     _createIcon(path) {
-        return new fabric.Path(path);
+        return new fabric.fabric.Path(path);
     }
 }
 

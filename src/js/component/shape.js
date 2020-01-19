@@ -116,8 +116,8 @@ class Shape extends Component {
             'mouse:down': this._handlers.mousedown
         });
 
-        fabric.util.addListener(document, 'keydown', this._handlers.keydown);
-        fabric.util.addListener(document, 'keyup', this._handlers.keyup);
+        fabric.fabric.util.addListener(document, 'keydown', this._handlers.keydown);
+        fabric.fabric.util.addListener(document, 'keyup', this._handlers.keyup);
     }
 
     /**
@@ -137,8 +137,8 @@ class Shape extends Component {
             'mouse:down': this._handlers.mousedown
         });
 
-        fabric.util.removeListener(document, 'keydown', this._handlers.keydown);
-        fabric.util.removeListener(document, 'keyup', this._handlers.keyup);
+        fabric.fabric.util.removeListener(document, 'keydown', this._handlers.keydown);
+        fabric.fabric.util.removeListener(document, 'keyup', this._handlers.keyup);
     }
 
     /**
@@ -232,15 +232,15 @@ class Shape extends Component {
 
         switch (type) {
             case 'rect':
-                instance = new fabric.Rect(options);
+                instance = new fabric.fabric.Rect(options);
                 break;
             case 'circle':
-                instance = new fabric.Ellipse(extend({
+                instance = new fabric.fabric.Ellipse(extend({
                     type: 'circle'
                 }, options));
                 break;
             case 'triangle':
-                instance = new fabric.Triangle(options);
+                instance = new fabric.fabric.Triangle(options);
                 break;
             default:
                 instance = {};
@@ -312,7 +312,7 @@ class Shape extends Component {
 
     /**
      * MouseDown event handler on canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event object
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event object
      * @private
      */
     _onFabricMouseDown(fEvent) {
@@ -334,7 +334,7 @@ class Shape extends Component {
 
     /**
      * MouseDown event handler on canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event object
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event object
      * @private
      */
     _onFabricMouseMove(fEvent) {

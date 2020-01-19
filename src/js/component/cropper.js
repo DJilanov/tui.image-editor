@@ -26,7 +26,7 @@ const DEFAULT_OPTION = {
  */
 class Cropper extends Component {
     constructor(graphics) {
-        super(componentNames.CROPPER, graphics);
+        super('CROPPER', graphics);
 
         /**
          * Cropzone
@@ -104,8 +104,8 @@ class Cropper extends Component {
         canvas.selection = false;
         canvas.defaultCursor = 'crosshair';
 
-        fabric.util.addListener(document, 'keydown', this._listeners.keydown);
-        fabric.util.addListener(document, 'keyup', this._listeners.keyup);
+        fabric.fabric.util.addListener(document, 'keydown', this._listeners.keydown);
+        fabric.fabric.util.addListener(document, 'keyup', this._listeners.keyup);
     }
 
     /**
@@ -128,8 +128,8 @@ class Cropper extends Component {
 
         this._cropzone = null;
 
-        fabric.util.removeListener(document, 'keydown', this._listeners.keydown);
-        fabric.util.removeListener(document, 'keyup', this._listeners.keyup);
+        fabric.fabric.util.removeListener(document, 'keydown', this._listeners.keydown);
+        fabric.fabric.util.removeListener(document, 'keyup', this._listeners.keyup);
     }
 
     /**
@@ -144,7 +144,7 @@ class Cropper extends Component {
 
     /**
      * onMousedown handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onFabricMouseDown(fEvent) {
@@ -168,7 +168,7 @@ class Cropper extends Component {
 
     /**
      * onMousemove handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event
      * @private
      */
     _onFabricMouseMove(fEvent) {

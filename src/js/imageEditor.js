@@ -10,7 +10,7 @@ import action from './action';
 import commandFactory from './factory/command';
 import Graphics from './graphics';
 import consts from './consts';
-import {sendHostName} from './util';
+import util from './util';
 
 const events = consts.eventNames;
 const commands = consts.commandNames;
@@ -87,6 +87,7 @@ class ImageEditor {
          * @type {Ui}
          */
         if (options.includeUI) {
+            // options.includeUI.theme = blackTheme;
             const UIOption = options.includeUI;
             UIOption.usageStatistics = options.usageStatistics;
 
@@ -147,7 +148,7 @@ class ImageEditor {
         });
 
         if (options.usageStatistics) {
-            sendHostName();
+            util.sendHostName();
         }
 
         if (this.ui) {

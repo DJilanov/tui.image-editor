@@ -1,6 +1,6 @@
 /**
  * @author NHN Ent. FE Development Team <dl_javascript@nhn.com>
- * @fileoverview Cropzone extending fabric.Rect
+ * @fileoverview Cropzone extending fabric.fabric.Rect
  */
 import snippet from 'tui-code-snippet';
 import fabric from 'fabric';
@@ -23,7 +23,7 @@ const CORNER_TYPE_BOTTOM_RIGHT = 'br';
  * @extends {fabric.Rect}
  * @ignore
  */
-const Cropzone = fabric.util.createClass(fabric.Rect, /** @lends Cropzone.prototype */{
+const Cropzone = fabric.fabric.util.createClass(fabric.Rect, /** @lends Cropzone.prototype */{
     /**
      * Constructor
      * @param {Object} canvas canvas

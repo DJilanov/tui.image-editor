@@ -27,11 +27,11 @@ class Line extends Component {
         this._width = 12;
 
         /**
-         * fabric.Color instance for brush color
+         * fabric.fabric.Color instance for brush color
          * @type {fabric.Color}
          * @private
          */
-        this._oColor = new fabric.Color('rgba(0, 0, 0, 0.5)');
+        this._oColor = new fabric.fabric.Color('rgba(0, 0, 0, 0.5)');
 
         /**
          * Listeners
@@ -79,7 +79,7 @@ class Line extends Component {
         this._width = setting.width || this._width;
 
         if (setting.color) {
-            this._oColor = new fabric.Color(setting.color);
+            this._oColor = new fabric.fabric.Color(setting.color);
         }
         brush.width = this._width;
         brush.color = this._oColor.toRgba();
@@ -105,7 +105,7 @@ class Line extends Component {
 
     /**
      * Mousedown event handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event object
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event object
      * @private
      */
     _onFabricMouseDown(fEvent) {
@@ -113,7 +113,7 @@ class Line extends Component {
         const pointer = canvas.getPointer(fEvent.e);
         const points = [pointer.x, pointer.y, pointer.x, pointer.y];
 
-        this._line = new fabric.Line(points, {
+        this._line = new fabric.fabric.Line(points, {
             stroke: this._oColor.toRgba(),
             strokeWidth: this._width,
             evented: false
@@ -131,7 +131,7 @@ class Line extends Component {
 
     /**
      * Mousemove event handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event object
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event object
      * @private
      */
     _onFabricMouseMove(fEvent) {
@@ -150,7 +150,7 @@ class Line extends Component {
 
     /**
      * Mouseup event handler in fabric canvas
-     * @param {{target: fabric.Object, e: MouseEvent}} fEvent - Fabric event object
+     * @param {{target: fabric.fabric.Object, e: MouseEvent}} fEvent - Fabric event object
      * @private
      */
     _onFabricMouseUp() {
