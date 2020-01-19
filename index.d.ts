@@ -310,6 +310,4 @@ declare namespace tuiImageEditor {
     }
 }
 
-declare module 'tui-image-editor' {
-    export = tuiImageEditor.ImageEditor;
-}
+export default tuiImageEditor;
