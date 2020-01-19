@@ -228,4 +228,4 @@ class Filter extends Component {
     }
 }
 
-module.exports = Filter;
+export default Filter;

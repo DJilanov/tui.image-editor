@@ -294,7 +294,7 @@ var instance = new ImageEditor(document.querySelector('#tui-image-editor'), {
 
 ### TypeScript
 If you using TypeScript, You must `import module = require('module')` on importing.
-[`export =` and `import = require()`](https://www.typescriptlang.org/docs/handbook/modules.html#export--and-import--require)
+[`export default` and `import = require()`](https://www.typescriptlang.org/docs/handbook/modules.html#export default--and-import--require)
 
 ```typescript
 import ImageEditor = require('tui-image-editor');

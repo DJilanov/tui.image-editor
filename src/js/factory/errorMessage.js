@@ -5,10 +5,10 @@
 import snippet from 'tui-code-snippet';
 import {keyMirror} from '../util';
 
-const types = keyMirror(
-    'UN_IMPLEMENTATION',
-    'NO_COMPONENT_NAME'
-);
+const types = {
+    UN_IMPLEMENTATION: 'UN_IMPLEMENTATION',
+    NO_COMPONENT_NAME: 'NO_COMPONENT_NAME'
+};
 const messages = {
     UN_IMPLEMENTATION: 'Should implement a method: ',
     NO_COMPONENT_NAME: 'Should set a component name'
@@ -22,7 +22,7 @@ const map = {
     }
 };
 
-module.exports = {
+export default {
     types: snippet.extend({}, types),
 
     create(type, ...args) {

@@ -154,4 +154,4 @@ class Icon extends Component {
     }
 }
 
-module.exports = Icon;
+export default Icon;

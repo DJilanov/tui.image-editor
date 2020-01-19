@@ -7,7 +7,7 @@ const FLOATING_POINT_DIGIT = 2;
 const {min, max} = Math;
 let hostnameSent = false;
 
-module.exports = {
+let utils = {
     /**
      * Clamp value
      * @param {number} value - Value
@@ -196,3 +196,5 @@ module.exports = {
         return Number(value.toFixed(FLOATING_POINT_DIGIT));
     }
 };
+
+export default utils;
